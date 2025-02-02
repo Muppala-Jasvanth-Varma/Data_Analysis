@@ -68,3 +68,56 @@ Ease of Use: The code is written in Python, making it accessible to data analyst
 Error Handling: The script includes error handling to ensure smooth execution even if issues arise (e.g., incorrect file paths).
 
 Insights: The analysis provides valuable insights into the distribution of taxi zones across boroughs and service zones.
+
+
+
+# OUTPUT :-
+
+Dataset loaded successfully!
+Schema of the dataset:
+root
+ |-- LocationID: integer (nullable = true)
+ |-- Borough: string (nullable = true)
+ |-- Zone: string (nullable = true)
+ |-- service_zone: string (nullable = true)
+
+First 5 rows of the dataset:
++----------+-------+-------------------+------------+
+|LocationID|Borough|Zone               |service_zone|
++----------+-------+-------------------+------------+
+|1         |EWR    |Newark Airport     |Airports    |
+|2         |Queens |Jamaica Bay        |Boro Zone   |
+|3         |Bronx  |Allerton/Pelham    |Boro Zone   |
++----------+-------+-------------------+------------+
+
+Basic Analysis:
+Total number of records: 265
+
+Number of zones in each borough:
++-------+----------+
+|Borough|Zone_Count|
++-------+----------+
+|Queens |69        |
+|Manhattan|48       |
+|Brooklyn|61        |
+|Bronx  |44        |
+|EWR    |1         |
++-------+----------+
+
+Unique service zones:
++------------+
+|service_zone|
++------------+
+|Airports    |
+|Boro Zone   |
++------------+
+
+Number of zones in each service zone:
++------------+----------+
+|service_zone|Zone_Count|
++------------+----------+
+|Boro Zone   |263       |
+|Airports    |2         |
++------------+----------+
+
+Spark session stopped.
